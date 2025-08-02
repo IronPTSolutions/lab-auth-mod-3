@@ -24,16 +24,6 @@ Debe tener los siguientes campos:
 
 ### 🔐 Autenticación y sesiones (`express-session`, `connect-mongo`)
 
-#### 🟢 Crear sesión (Login)
-- **Método:** `POST /sessions`
-- **Descripción:** Valida las credenciales (`username` y `password`) y si son correctas, crea una sesión con el `userId` y devuelve una cookie de sesión al cliente y el usuario autenticado.
-
-#### 🔴 Cerrar sesión (Logout)
-- **Método:** `DELETE /sessions`
-- **Descripción:** Destruye la sesión activa y elimina la cookie del cliente.
-
----
-
 ### 👤 CRUD de usuarios
 
 #### 🟢 Crear usuario
@@ -41,6 +31,16 @@ Debe tener los siguientes campos:
 - **Descripción:** Crea un nuevo usuario. Cualquier usuario puede acceder a este endpoint.  
   - Antes de guardar, el `username` debe ser único.
   - La contraseña debe almacenarse encriptada usando `bcryptjs`.
+
+---
+
+#### 🟢 Crear sesión (Login)
+- **Método:** `POST /sessions`
+- **Descripción:** Valida las credenciales (`username` y `password`) y si son correctas, crea una sesión con el `userId` y devuelve una cookie de sesión al cliente y el usuario autenticado.
+
+#### 🔴 Cerrar sesión (Logout)
+- **Método:** `DELETE /sessions`
+- **Descripción:** Destruye la sesión activa y elimina la cookie del cliente.
 
 ---
 
